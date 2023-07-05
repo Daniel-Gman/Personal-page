@@ -5,12 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/background.css">
+    <link rel="stylesheet" href="style/burger.css">
+    <link rel="stylesheet" href="style/style.css">
     <script src="js/main.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
+
+
+
     <section class="moon">
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="https://github.com/Daniel-Gman">Github</a></li>
+                    <li><a href="mailto:leinad.vermeulen@gmail.com">Contact</a></li>
+                    <li><a href="#">Log-in page</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+
+        <ul class="grid">
+            <li class="card card1">
+                <p>test</p>
+            </li>
+        </ul>
         <img class="background-moon" src="/src/moon.webp" alt="">
     </section>
     <section class="space-transition"></section>
