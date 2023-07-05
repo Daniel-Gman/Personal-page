@@ -26,7 +26,7 @@ p {
 .header {
     position: relative;
     text-align: center;
-    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    background: rgb(30, 132, 190);
     color: white;
 }
 
@@ -38,7 +38,6 @@ p {
 }
 
 .flex {
-    /*Flexbox for containers*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +49,6 @@ p {
     width: 100%;
     height: 15vh;
     margin-bottom: -7px;
-    /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
 }
@@ -61,8 +59,6 @@ p {
     text-align: center;
     background-color: white;
 }
-
-/* Animation */
 
 .parallax>use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
@@ -92,7 +88,7 @@ main {
     background-color: #734ae8;
     background-image: linear-gradient(#89d4cf 0%, #6dd3ff 74%, rgb(55, 152, 255));
     width: 100%;
-    height: 150rem;
+    height: 100rem;
 }
 
 .moon {
@@ -154,6 +150,10 @@ main {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
+    -webkit-mask: linear-gradient(to top,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1));
+    transition: opacity 0.5s ease;
 }
 
 .earth-transition {
@@ -164,9 +164,59 @@ main {
     transition: background 0.5s ease;
 }
 
-.cloud {}
+.cloud {
+    width: 100%;
+    height: 100rem;
+    background-color: rgb(45, 168, 227);
+}
 
-.cloud-transition {}
+.cloud-background {
+    width: 100%;
+    height: 100rem;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    transition: opacity 0.5s ease;
+}
+
+.cloud-transition {
+    width: 100%;
+    height: 100rem;
+    background: linear-gradient(rgb(0, 136, 182), rgb(45, 168, 227));
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    transition: opacity 0.5s ease;
+}
+
+.ocean-transition {
+    width: 100%;
+    height: 75rem;
+    background: linear-gradient(rgb(237, 251, 254), rgb(30, 132, 190));
+}
+
+.ocean-mid {
+    width: 100%;
+    height: 75rem;
+    background: linear-gradient(rgb(55, 152, 255), rgb(2, 124, 254));
+}
+
+.ocean-bottom {
+    width: 100%;
+    height: 75rem;
+    background-color: rgb(2, 124, 254);
+}
+
+.ocean-background {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
 
 @media screen and (min-height: 75rem) {
     body {
