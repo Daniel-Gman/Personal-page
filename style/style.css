@@ -4,11 +4,11 @@
 }
 
 .grid {
-    height: 80rem;
+    height: 125rem;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(16, 2fr);
-    grid-template-rows: repeat(16, 2fr);
+    grid-template-columns: repeat(20, 2fr);
+    grid-template-rows: repeat(28, 2fr);
     gap: 1rem;
 }
 
@@ -17,17 +17,33 @@
     background: white;
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem 0 #a492b2;
+    z-index: 5;
 }
 
 .card1 {
     grid-row: 2/10;
-    grid-column: 4/14;
-    background-color: red;
+    grid-column: 6/16;
+    background-color: whitesmoke;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-p {
+.card2 {
+    grid-row: 10/11;
+    grid-column: 6/16;
+    background-color: whitesmoke;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+h1 {
     display: flex;
     justify-content: center;
     color: black;
-    font-size: 10rem;
+    font-size: 8rem;
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/login.css">
+    <script src="js/login.js" defer></script>
+    <title>User Registration</title>
+</head>
+
+<body>
+    <div class="background-image"><img class="gif" src="src/login-space.gif" alt=""></div>
+    <div class="card">
+        <div class="card1">
+            <div class="card2">
+                <h2>User Registration</h2>
+                <form action="insert.php" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+
+                    <input type="submit" value="Register">
+                </form>
+                <h3>Already have an account?</h3><a href="login.html">Log-in here!
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
