@@ -16,7 +16,7 @@ try {
     $stmt->bindParam(':password', $password);
     $stmt->execute();
 
-    header("location: login.html");
+    header("location: login.html?alert=true");
     exit;
 } catch (PDOException $e) {
     die("Error connecting to the database: " . $e->getMessage());

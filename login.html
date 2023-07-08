@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/login.css">
     <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const alertParam = urlParams.get('alert');
+            if (alertParam === 'true') {
+                alert("Account has been created, please wait!");
+            }
+        };
+    </script>
 </head>
 
 <body>
