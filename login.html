@@ -13,8 +13,18 @@
             if (alertParam === 'true') {
                 alert("Account has been created, please wait!");
             }
+
+            const wrongParam = urlParams.get('wrong');
+            if (wrongParam === 'true') {
+                document.querySelector('h2').innerHTML = 'Wrong credentials';
+                document.querySelector('h2').style.color = 'red'
+                document.querySelector('h2').style.fontFamily = 'Arial, sans-serif';
+                document.querySelector('h2').style.textDecoration = 'underline red';
+            }
         };
     </script>
+
+
 </head>
 
 <body>

@@ -19,7 +19,7 @@ try {
         header("location: Index.html");
         exit;
     } else {
-        echo "Login doesn't match!";
+        header("location: login.html?wrong=true");
     }
 } catch (PDOException $e) {
     die("Error connecting to the database: " . $e->getMessage());
